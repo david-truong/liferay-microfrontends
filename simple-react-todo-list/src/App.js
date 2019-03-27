@@ -23,15 +23,15 @@ class App extends Component {
   onSubmit(event) {
     event.preventDefault();
     if (this.props.user) {
-      if (localStorage.getItem(this.props.user.serializable.firstName)) {
+      if (localStorage.getItem(this.props.user.userFirstName)) {
 
         localStorage.setItem(
-          this.props.user.serializable.firstName,
-          JSON.stringify(JSON.parse(localStorage.getItem(this.props.user.serializable.firstName)).concat([this.state.desc])))
+          this.props.user.userFirstName,
+          JSON.stringify(JSON.parse(localStorage.getItem(this.props.user.userFirstName)).concat([this.state.desc])))
   
       } else {        
         localStorage.setItem(
-          this.props.user.serializable.firstName,
+          this.props.user.userFirstName,
           JSON.stringify([this.state.desc]))
       }
     }   
@@ -53,7 +53,7 @@ class App extends Component {
           </code>
           </p>
         <p>
-          The user first name: {this.props.user ? this.props.user.serializable.firstName : "No user loaded"}
+          The user first name: {this.props.user ? this.props.user.userFirstName : "No user loaded"}
         </p>
         <h1>ToDoAPP</h1>
         <form className="app">
@@ -70,8 +70,8 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({items: this.props.user 
-      && localStorage.getItem(this.props.user.serializable.firstName) 
-      ? JSON.parse(localStorage.getItem(this.props.user.serializable.firstName)) 
+      && localStorage.getItem(this.props.user.userFirstName) 
+      ? JSON.parse(localStorage.getItem(this.props.user.userFirstName)) 
       : []});
   }
 }

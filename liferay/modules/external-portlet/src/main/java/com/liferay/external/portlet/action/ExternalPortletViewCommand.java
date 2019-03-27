@@ -39,14 +39,21 @@ public class ExternalPortletViewCommand implements MVCRenderCommand {
 		try {
 			User user = PortalUtil.getUser(PortalUtil.getHttpServletRequest(renderRequest));
 
-			Map<String, String> userInfo = new HashMap<>();
+			Map<String, String> lifereyContext = new HashMap<>();
 
-			userInfo.put("firstName", user.getFirstName());
+			lifereyContext.put("userFirstName", user.getFirstName());
+			lifereyContext.put("userLastName", user.getLastName());
+			lifereyContext.put("userFullName", user.getFullName());
+			lifereyContext.put("userNameScreen", user.getScreenName());
+			lifereyContext.put("userEmail", user.getEmailAddress());
+			lifereyContext.put("userId", String.valueOf(user.getUserId()));
+			lifereyContext.put("userCompanyId", String.valueOf(user.getCompanyId()));
 
-			String userInfoJson = JSONFactoryUtil.serialize(userInfo);
+
+			String lifereyContextJson = JSONFactoryUtil.serialize(lifereyContext);
 
 			renderRequest.setAttribute(
-					"userInfo", userInfoJson);
+					"lifereyContext", lifereyContextJson);
 		} catch (PortalException e) {
 			_log.error(e);
 		}

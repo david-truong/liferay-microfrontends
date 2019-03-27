@@ -19,7 +19,7 @@
 	  	deps: [moduleName],
 	  	callback: function (module) {
           module.default(document.getElementById(htmlSelector), undefined, {
-			user: JSON.parse(JSON.stringify(${userInfo}))
+			user: JSON.parse(JSON.stringify(${lifereyContext})).map
           });
         }
 	});
