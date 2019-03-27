@@ -1,0 +1,5 @@
+Bundle-Name: external-portlet
+Bundle-SymbolicName: com.liferay.external.portlet
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.external.portlet.constants
+-metatype: *
