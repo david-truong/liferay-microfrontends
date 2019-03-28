@@ -5,9 +5,9 @@
   "dependencies": {
     "enzyme": "^2.7.1",
     "enzyme-to-json": "^1.5.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.4.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
     "styled-components": "^1.4.4",
     "react-shadow-dom-retarget-events": "^1.0.8"
   },
