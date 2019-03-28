@@ -41,14 +41,15 @@ public class ExternalPortletViewCommand implements MVCRenderCommand {
 
 			Map<String, String> liferayContext = new HashMap<>();
 
-			liferayContext.put("userFirstName", user.getFirstName());
-			liferayContext.put("userLastName", user.getLastName());
-			liferayContext.put("userFullName", user.getFullName());
-			liferayContext.put("userNameScreen", user.getScreenName());
-			liferayContext.put("userEmail", user.getEmailAddress());
-			liferayContext.put("userId", String.valueOf(user.getUserId()));
-			liferayContext.put("userCompanyId", String.valueOf(user.getCompanyId()));
-
+			if (user != null) {
+				liferayContext.put("userFirstName", user.getFirstName());
+				liferayContext.put("userLastName", user.getLastName());
+				liferayContext.put("userFullName", user.getFullName());
+				liferayContext.put("userNameScreen", user.getScreenName());
+				liferayContext.put("userEmail", user.getEmailAddress());
+				liferayContext.put("userId", String.valueOf(user.getUserId()));
+				liferayContext.put("userCompanyId", String.valueOf(user.getCompanyId()));
+			}
 
 			String liferayContextJson = JSONFactoryUtil.serialize(liferayContext);
 
