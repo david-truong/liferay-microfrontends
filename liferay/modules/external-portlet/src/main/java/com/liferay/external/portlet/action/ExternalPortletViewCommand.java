@@ -39,21 +39,21 @@ public class ExternalPortletViewCommand implements MVCRenderCommand {
 		try {
 			User user = PortalUtil.getUser(PortalUtil.getHttpServletRequest(renderRequest));
 
-			Map<String, String> lifereyContext = new HashMap<>();
+			Map<String, String> liferayContext = new HashMap<>();
 
-			lifereyContext.put("userFirstName", user.getFirstName());
-			lifereyContext.put("userLastName", user.getLastName());
-			lifereyContext.put("userFullName", user.getFullName());
-			lifereyContext.put("userNameScreen", user.getScreenName());
-			lifereyContext.put("userEmail", user.getEmailAddress());
-			lifereyContext.put("userId", String.valueOf(user.getUserId()));
-			lifereyContext.put("userCompanyId", String.valueOf(user.getCompanyId()));
+			liferayContext.put("userFirstName", user.getFirstName());
+			liferayContext.put("userLastName", user.getLastName());
+			liferayContext.put("userFullName", user.getFullName());
+			liferayContext.put("userNameScreen", user.getScreenName());
+			liferayContext.put("userEmail", user.getEmailAddress());
+			liferayContext.put("userId", String.valueOf(user.getUserId()));
+			liferayContext.put("userCompanyId", String.valueOf(user.getCompanyId()));
 
 
-			String lifereyContextJson = JSONFactoryUtil.serialize(lifereyContext);
+			String liferayContextJson = JSONFactoryUtil.serialize(liferayContext);
 
 			renderRequest.setAttribute(
-					"lifereyContext", lifereyContextJson);
+					"liferayContext", liferayContextJson);
 		} catch (PortalException e) {
 			_log.error(e);
 		}
