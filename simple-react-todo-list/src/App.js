@@ -60,13 +60,6 @@ class App extends Component {
     } else {
       return (
         <React.Fragment>
-          User object
-          <br />
-          <code>
-            {this.props.user
-              ? JSON.stringify(this.props.user)
-              : "No user loaded"}
-          </code>
           <RenderTodoApp
             onChange={this.onChange}
             onSubmit={this.onSubmit}
@@ -80,7 +73,6 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Welcome to ReactJS + Liferay Portlet</h1>
         {this.renderTodos()}
       </React.Fragment>
     );
@@ -98,7 +90,7 @@ class App extends Component {
 
 const RenderTodoApp = ({ onChange, onSubmit, items }) => (
   <React.Fragment>
-    <h1>ToDoAPP</h1>
+    <h1>My Todos</h1>
     <form className="app">
       <input type="text" onChange={onChange} />
       <button onClick={onSubmit}>Submit</button>
