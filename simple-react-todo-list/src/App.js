@@ -47,8 +47,8 @@ class App extends Component {
   renderTodos() {
     if (this.props.user && !this.props.user.userId) {
       return (
-        <h3 style={{ padding: "25px" }}>
-          Please loggin into liferay to be able to register todos
+        <h3>
+          Please login to create your todos
         </h3>
       );
     } else if (!this.props.user) {
