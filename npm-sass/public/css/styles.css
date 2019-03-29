@@ -1,0 +1,14 @@
+body {
+  background: #eeffcc; }
+
+.container {
+  width: 100%; }
+  .container h1 {
+    color: blue; }
+
+a.myAnchor {
+  color: blue; }
+  a.myAnchor:hover {
+    text-decoration: underline; }
+  a.myAnchor:visited {
+    color: purple; }
