@@ -1,17 +1,30 @@
 {
-  "name": "npm-sass",
+  "name": "remote-theme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run scss && npm run serve",
-    "compile": "node-sass --recursive sass --output public/css",
-    "serve": "http-server ./public/css -p 4040"
+    "build": "gulp build:css",
+    "serve": "http-server ./build -p 4040",
+    "start": "npm run build && npm run serve"
   },
   "author": "Gustavo Mantuan",
-  "license": "ISC",
+  "license": "LGPL",
   "dependencies": {
-    "http-server": "^0.11.1",
-    "node-sass": "^4.11.0"
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "liferay-theme-deps-7.1": "8.0.0-rc.2",
+    "liferay-theme-tasks": "8.0.0-rc.2"
+  },
+  "keywords": [
+    "liferay-theme"
+  ],
+  "liferayTheme": {
+    "baseTheme": "styled",
+    "distName": "remote-theme",
+    "rubySass": false,
+    "version": "7.1"
   }
 }

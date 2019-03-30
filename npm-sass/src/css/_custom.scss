@@ -7,16 +7,16 @@ body {
 .container {
   width: 100%;
   h1 {
-      color: blue;
+    color: blue;
   }
 }
 
 a.myAnchor {
   color: blue;
   &:hover {
-      text-decoration: underline;
+    text-decoration: underline;
   }
   &:visited {
-      color: purple;
+    color: purple;
   }
 }
