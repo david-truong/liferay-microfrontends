@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run scss && npm run serve",
-    "scss": "node-sass --recursive sass --output public/css",
+    "compile": "node-sass --recursive sass --output public/css",
     "serve": "http-server ./public/css -p 4040"
   },
   "author": "Gustavo Mantuan",
