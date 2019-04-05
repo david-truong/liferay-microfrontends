@@ -1,12 +1,12 @@
 # liferay-microfrontends
 
-/*
+//
 
-TODO
+--TODO
 
-improve this one
+--improve this one
 
-*/
+//
 
 First one
 
