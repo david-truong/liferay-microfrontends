@@ -42,6 +42,8 @@ at your *package.json* we need to create a task for generating our output (the w
 by the configuration above, if our webserver are runing at *localhost:3000*
 we should have access to the webpackBootstrap application code at: *localhost:3000/app.js*
 
+### Liferay Portal
+
 at Liferay Portal, we should deploy the *liferay/modules/external-portlet*
 
 drag it to a page, then open the portlet configuration:
@@ -50,7 +52,9 @@ fit the *remote_app_bundle_src* input with your remote webpackBootstrap javascri
 fit the *remote_app_html_selector* should be just an unique id
 fit the *remote_app_module_name* must be exactly the same as configured at webpack.config in the output library parameter.
 
-save then reload the page, you should see your react app running inside the Liferay Portlet
+### Good to go
+
+You should see at your Liferay Portal (after reloading the page) the React APP running smoothly.
 
 
 
