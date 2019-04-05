@@ -33,7 +33,7 @@ module.exports = {
 }
 
 ```
-at our package.json we need to create a task for generating our output (the whole application) in a single ".js" file :
+at your *package.json* we need to create a task for generating our output (the whole application) in a single "*.js*" file :
 ```
 "scripts" : {
   "build:webpack": "webpack --mode development && npm start",
